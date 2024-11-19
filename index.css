@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root.custom {
+  --custom-bg: #ffffff;
+  --custom-text: #000000;
+  background-color: var(--custom-bg);
+  color: var(--custom-text);
+}
+
+:root.custom * {
+  border-color: var(--custom-text);
+}
+
+:root.custom .bg-white {
+  background-color: var(--custom-bg);
+}
+
+:root.custom .text-gray-900 {
+  color: var(--custom-text);
+}
+
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #3b82f6;
+  --rdp-background-color: #e5e7eb;
+  margin: 0;
+}
+
+.dark .rdp {
+  --rdp-accent-color: #60a5fa;
+  --rdp-background-color: #374151;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #e5e7eb;
+}
+
+.dark .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #374151;
+}
+
+.dark .rdp-day_selected,
+.dark .rdp-day_selected:focus-visible,
+.dark .rdp-day_selected:hover {
+  background-color: #60a5fa;
+  color: white;
+}
+
+.dark .rdp-button:focus-visible:not([disabled]) {
+  background-color: #374151;
+}
+
+.dark .rdp-button:hover:not([disabled]) {
+  background-color: #4b5563;
+}
+
+.dark .rdp-caption_label,
+.dark .rdp-head_cell {
+  color: #e5e7eb;
+}
+
+.dark .rdp-day {
+  color: #e5e7eb;
+}
+
+.dark .rdp-day_disabled {
+  color: #6b7280;
+}
